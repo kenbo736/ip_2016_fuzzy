@@ -1,3 +1,2 @@
-echo 0 > crashdata.txt
-rm log*
-../../../afl-2.33b/afl-fuzz -i input/ -o output/ -d build/app_code/app
+../../afl-2.35b/afl-fuzz -t 10000 -i input/ -o output/ -M fuzzer0 -- build/app
+#screen ../../afl-2.35b/afl-fuzz -t 10000 -i input/ -o output/ -S fuzzer1 -- build/app
